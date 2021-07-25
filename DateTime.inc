@@ -5,7 +5,7 @@
 #endif
 #define _DateTime_included_
 
-#define DateTime.Now -1
+#define DateTime_Now -1
 #define DATE_LENGTH 32
 
 #include <TimeSpan>
@@ -21,9 +21,9 @@ methodmap DateTime __nullable__
     * @param stamp      Unix-Epoch time.
     * @return           a new DateTime with the given stamp.
     */
-    public DateTime(int stamp = DateTime.Now)
+    public DateTime(int stamp = DateTime_Now)
     {
-        if(stamp == DateTime.Now)
+        if(stamp == DateTime_Now)
             stamp = GetTime();
 
         return view_as<DateTime>(stamp);
@@ -187,7 +187,7 @@ methodmap DateTime __nullable__
     */
     public bool HasElapsed()
     {
-        return this.IsOlder(new DateTime(DateTime.Now));
+        return this.IsOlder(new DateTime(DateTime_Now));
     }
 
     public static bool IsYearLeap(int year)
@@ -211,7 +211,7 @@ methodmap DateTime __nullable__
     */
     public static DateTime Now()
     {
-        return new DateTime(DateTime.Now);
+        return new DateTime(DateTime_Now);
     }
 
     public static DateTime Parse(const char[] input)
