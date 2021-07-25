@@ -10,6 +10,9 @@
 
 #include <TimeSpan>
 
+#include "DateTime/EMonth.inc"
+#include "DateTime/EDay.inc"
+
 methodmap DateTime __nullable__
 {
     /**
