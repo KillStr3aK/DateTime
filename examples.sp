@@ -16,7 +16,7 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-	DateTime dateTime = new DateTime(DateTime.Now);
+	DateTime dateTime = new DateTime(DateTime_Now);
 
 	char szDate[DATE_LENGTH];
 	dateTime.ToString(szDate, sizeof(szDate));
