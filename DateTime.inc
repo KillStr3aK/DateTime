@@ -285,12 +285,12 @@ methodmap DateTime __nullable__
 	* @return			Amount of days in the given month.
 	*/
 	public static int GetDaysInMonth(int year, EMonth month)
-	{
+    	{
 		int daysInMonths[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		if(DateTime.IsYearLeap(year))
-			daysInMonths[month] = 29;
-			
-		return daysInMonths[month - 1];
+			daysInMonths[view_as<int>(month)] = 29;
+
+		return daysInMonths[view_as<int>(month) - 1];
 	}
 
 	/**
