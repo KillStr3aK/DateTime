@@ -228,7 +228,7 @@ stock TimeSpan operator+(TimeSpan oper1, TimeSpan oper2)
 
 stock TimeSpan operator+(TimeSpan oper1, int oper2)
 {
-	return new TimeSpan(oper1.TotalSeconds + oper2);
+	return TimeSpan.FromSeconds(oper1.TotalSeconds + oper2);
 }
 
 stock TimeSpan operator-(TimeSpan oper1, TimeSpan oper2)
@@ -238,7 +238,7 @@ stock TimeSpan operator-(TimeSpan oper1, TimeSpan oper2)
 
 stock TimeSpan operator-(TimeSpan oper1, int oper2)
 {
-	return new TimeSpan(oper1.TotalSeconds - oper2);
+	return TimeSpan.FromSeconds(oper1.TotalSeconds - oper2);
 }
 
 stock bool operator<(TimeSpan oper1, TimeSpan oper2)
